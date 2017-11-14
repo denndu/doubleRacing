@@ -13,6 +13,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     
     var leftCar = SKSpriteNode()
     var rightCar = SKSpriteNode()
+    
 
     var canMove = false
     var leftToMoveLeft = true
@@ -142,7 +143,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         leftRoadStrip.position.x = -187.5
         leftRoadStrip.position.y = 700
         addChild(leftRoadStrip)
-        
+
         let rightRoadStrip = SKShapeNode(rectOf: CGSize(width: 10, height: 40))
         rightRoadStrip.strokeColor = SKColor.white
         rightRoadStrip.fillColor = SKColor.white
@@ -152,6 +153,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         rightRoadStrip.position.x = 187.5
         rightRoadStrip.position.y = 700
         addChild(rightRoadStrip)
+        
+        
+        
+        
     }
     
     func showRoadStrip(){
@@ -306,7 +311,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         }
         let menuScene = SKScene(fileNamed: "GameMenu")!
         menuScene.scaleMode = .aspectFill
-        view?.presentScene(menuScene, transition: SKTransition.flipVertical(withDuration: TimeInterval(2)))
+        view?.presentScene(menuScene, transition: SKTransition.flipHorizontal(withDuration: TimeInterval(2)))
     }
     
     
