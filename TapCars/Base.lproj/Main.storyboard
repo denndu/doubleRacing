@@ -12,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="BJracing_Tapcar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Double_racing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -29,7 +29,7 @@
         <!--Web View Controller-->
         <scene sceneID="78i-Ub-CBo">
             <objects>
-                <viewController storyboardIdentifier="web" id="IcK-YG-fvB" customClass="WebViewController" customModule="Gravity_car" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="web" id="IcK-YG-fvB" customClass="WebViewController" customModule="Double_racing" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VKJ-p0-Wl1"/>
                         <viewControllerLayoutGuide type="bottom" id="7g7-VT-D4B"/>

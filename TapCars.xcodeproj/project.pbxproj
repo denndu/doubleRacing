@@ -18,8 +18,8 @@
 		21717ECA1E3739EF00E12B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21717EC81E3739EF00E12B2E /* LaunchScreen.storyboard */; };
 		21717ED21E37682100E12B2E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21717ED11E37682100E12B2E /* Helper.swift */; };
 		9504AEE71FC1C44E00BC2E61 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9504AEE61FC1C44E00BC2E61 /* WebViewController.swift */; };
+		9504AF121FC1CD8D00BC2E61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9504AF141FC1CD8D00BC2E61 /* InfoPlist.strings */; };
 		953C6C251FA33A690064370A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C6C241FA33A690064370A /* libsqlite3.tbd */; };
-		95A9911C1FA769DF00B47DDA /* InfoPlist.Strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A9911E1FA769DF00B47DDA /* InfoPlist.Strings */; };
 		F54054421F975E7F008C49E7 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54054221F975E1F008C49E7 /* AVOSCloud.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,7 +141,7 @@
 /* Begin PBXFileReference section */
 		213F344F1E378329001EC874 /* GameMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameMenu.sks; sourceTree = "<group>"; };
 		213F34511E37833C001EC874 /* GameMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMenu.swift; sourceTree = "<group>"; };
-		21717EB61E3739EF00E12B2E /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21717EB61E3739EF00E12B2E /* Double racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Double racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21717EB91E3739EF00E12B2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21717EBB1E3739EF00E12B2E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		21717EBF1E3739EF00E12B2E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 		21717ECB1E3739EF00E12B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21717ED11E37682100E12B2E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9504AEE61FC1C44E00BC2E61 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9504AF131FC1CD8D00BC2E61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		953C6C241FA33A690064370A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		95A991181FA7653F00B47DDA /* TapCars.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TapCars.entitlements; sourceTree = "<group>"; };
-		95A991211FA76A3A00B47DDA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.Strings"; sourceTree = "<group>"; };
 		F540540E1F975E1F008C49E7 /* AVOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AVOS.xcodeproj; path = "objc-sdk/AVOS/AVOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +184,7 @@
 		21717EB71E3739EF00E12B2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21717EB61E3739EF00E12B2E /* .app */,
+				21717EB61E3739EF00E12B2E /* Double racing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 				21717EC61E3739EF00E12B2E /* Assets.xcassets */,
 				21717EC81E3739EF00E12B2E /* LaunchScreen.storyboard */,
 				21717ECB1E3739EF00E12B2E /* Info.plist */,
-				95A9911E1FA769DF00B47DDA /* InfoPlist.Strings */,
+				9504AF141FC1CD8D00BC2E61 /* InfoPlist.strings */,
 			);
 			path = TapCars;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			);
 			name = TapCars;
 			productName = TapCars;
-			productReference = 21717EB61E3739EF00E12B2E /* .app */;
+			productReference = 21717EB61E3739EF00E12B2E /* Double racing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -429,11 +429,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				213F34501E378329001EC874 /* GameMenu.sks in Resources */,
+				9504AF121FC1CD8D00BC2E61 /* InfoPlist.strings in Resources */,
 				21717EC51E3739EF00E12B2E /* Main.storyboard in Resources */,
 				21717EBC1E3739EF00E12B2E /* GameScene.sks in Resources */,
 				21717EC71E3739EF00E12B2E /* Assets.xcassets in Resources */,
 				21717ECA1E3739EF00E12B2E /* LaunchScreen.storyboard in Resources */,
-				95A9911C1FA769DF00B47DDA /* InfoPlist.Strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,12 +472,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		95A9911E1FA769DF00B47DDA /* InfoPlist.Strings */ = {
+		9504AF141FC1CD8D00BC2E61 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				95A991211FA76A3A00B47DDA /* zh-Hans */,
+				9504AF131FC1CD8D00BC2E61 /* zh-Hans */,
 			);
-			name = InfoPlist.Strings;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -587,7 +587,7 @@
 				INFOPLIST_FILE = TapCars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = double.racing;
-				PRODUCT_NAME = "";
+				PRODUCT_NAME = "Double racing";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -604,7 +604,7 @@
 				INFOPLIST_FILE = TapCars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = double.racing;
-				PRODUCT_NAME = "";
+				PRODUCT_NAME = "Double racing";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
