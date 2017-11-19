@@ -17,20 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         AVOSCloud.setApplicationId("2V9FmDTTVzjjOY3qlRMiaVjx-gzGzoHsz", clientKey: "wdaTGiOxcgJjNtg8P7C1XIWs")
-//        if #available(iOS 10.0, *){
-//            let center  = UNUserNotificationCenter.current()
-//            center.delegate = self
-//            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
-//                if error == nil{
-//                    DispatchQueue.main.async {
-//                        UIApplication.shared.registerForRemoteNotifications()
-//                    }
-//                    
-//                }
-//            }
-//        }else{
-//            UIApplication.shared.registerForRemoteNotifications()
-//        }
+
         // Override point for customization after application launch.
         return true
     }

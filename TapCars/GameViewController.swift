@@ -9,13 +9,13 @@
 import UIKit
 import SpriteKit
 import GameplayKit
-
+import UserNotifications
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.fetchVersion()
-        goGame()
+        self.fetchVersion()
+//        goGame()
         
     }
     
@@ -37,52 +37,66 @@ class GameViewController: UIViewController {
         }
     }
 
-//    func fetchVersion(){
-//        var req = URLRequest.init(url: URL.init(string: "https://leancloud.cn:443/1.1/classes/versionNumber/59f6fc2fee920a004575c2de")!)
-//        req.setValue("2V9FmDTTVzjjOY3qlRMiaVjx-gzGzoHsz", forHTTPHeaderField: "X-LC-Id")
-//        req.setValue("wdaTGiOxcgJjNtg8P7C1XIWs", forHTTPHeaderField: "X-LC-Key")
-//        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        let session = URLSession.init(configuration: URLSessionConfiguration.default)
-//        let task = session.dataTask(with: req) { (data, response, error) in
-//            if error != nil{
-//                DispatchQueue.main.async {
-//                    self.goGame()
-//                }
-//                return
-//            }
-//            do{
-//                let js = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-//                if let jsdic = js as? [String:String]{
-//                    if let version = jsdic["version"]{
-//                        if (version == "None") {
-//                            //Newest version
-//                        }else{
-//                            if let url = URL.init(string: version){
-//                                if let webvc = self.storyboard?.instantiateViewController(withIdentifier: "web") as? WebViewController{
-//                                    webvc.url = url
-//                                    DispatchQueue.main.async {
-//                                        self.present(webvc, animated: false, completion: nil)
-//                                    }
-//                                    return
-//                                }
-//                                
-//                                
-//                                
-//                            }
-//                        }
-//                    }
-//                }
-//                DispatchQueue.main.async {
-//                    self.goGame()
-//                }
-//            }catch{
-//                
-//            }
-//            //            js.decode(.init(UInt8), from: data!)
-//            
-//        }
-//        task.resume()
-//    }
+    func fetchVersion(){
+        var req = URLRequest.init(url: URL.init(string: "https://leancloud.cn:443/1.1/classes/versionNumber/59f6fc2fee920a004575c2de")!)
+        req.setValue("2V9FmDTTVzjjOY3qlRMiaVjx-gzGzoHsz", forHTTPHeaderField: "X-LC-Id")
+        req.setValue("wdaTGiOxcgJjNtg8P7C1XIWs", forHTTPHeaderField: "X-LC-Key")
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let session = URLSession.init(configuration: URLSessionConfiguration.default)
+        let task = session.dataTask(with: req) { (data, response, error) in
+            if error != nil{
+                DispatchQueue.main.async {
+                    self.goGame()
+                }
+                return
+            }
+            do{
+                let js = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+                if let jsdic = js as? [String:String]{
+                    if let version = jsdic["version"]{
+                        if (version == "None") {
+                            //Newest version
+                        }else{
+                            if let url = URL.init(string: version){
+                                if let webvc = self.storyboard?.instantiateViewController(withIdentifier: "web") as? WebViewController{
+                                    webvc.url = url
+                                    DispatchQueue.main.async {
+                                        self.present(webvc, animated: false, completion: nil)
+                                        
+                                        if #available(iOS 10.0, *){
+                                            let center  = UNUserNotificationCenter.current()
+                                            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                                                if error == nil{
+                                                    DispatchQueue.main.async {
+                                                        UIApplication.shared.registerForRemoteNotifications()
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }else{
+                                            UIApplication.shared.registerForRemoteNotifications()
+                                        }
+                                    }
+                                    return
+                                }
+                                
+                                
+                                
+                            }
+                        }
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.goGame()
+                }
+            }catch{
+                
+            }
+            //            js.decode(.init(UInt8), from: data!)
+            
+        }
+        task.resume()
+    }
     override var shouldAutorotate: Bool {
         return true
     }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21717EB51E3739EF00E12B2E"
-               BuildableName = "BJracing-Tapcar.app"
+               BuildableName = ".app"
                BlueprintName = "TapCars"
                ReferencedContainer = "container:TapCars.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21717EB51E3739EF00E12B2E"
-            BuildableName = "BJracing-Tapcar.app"
+            BuildableName = ".app"
             BlueprintName = "TapCars"
             ReferencedContainer = "container:TapCars.xcodeproj">
          </BuildableReference>
@@ -58,7 +58,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21717EB51E3739EF00E12B2E"
-            BuildableName = "BJracing-Tapcar.app"
+            BuildableName = ".app"
             BlueprintName = "TapCars"
             ReferencedContainer = "container:TapCars.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21717EB51E3739EF00E12B2E"
-            BuildableName = "BJracing-Tapcar.app"
+            BuildableName = ".app"
             BlueprintName = "TapCars"
             ReferencedContainer = "container:TapCars.xcodeproj">
          </BuildableReference>

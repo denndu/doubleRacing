@@ -26,5 +26,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="78i-Ub-CBo">
+            <objects>
+                <viewController storyboardIdentifier="web" id="IcK-YG-fvB" customClass="WebViewController" customModule="Gravity_car" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VKJ-p0-Wl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="7g7-VT-D4B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyj-eG-XLO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfI-yD-KS1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-qy-rHw">
+                                <rect key="frame" x="0.0" y="618" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Wha-SY-TgV"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" image="caret_black" id="CyV-Vo-JLq">
+                                        <connections>
+                                            <action selector="backButtonTap:" destination="IcK-YG-fvB" id="s1R-m1-B7k"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="Pen-SC-zT2"/>
+                                    <barButtonItem title="Item" image="caret_black_right" width="86" id="zTv-JI-hjm">
+                                        <connections>
+                                            <action selector="forwardButtonTap:" destination="IcK-YG-fvB" id="GCP-bV-yEv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="fNy-Qf-BNv"/>
+                                    <barButtonItem title="Item" image="icon_refresh" id="aCl-O2-T8t">
+                                        <connections>
+                                            <action selector="refresh:" destination="IcK-YG-fvB" id="A1a-dL-hCY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="A1t-VF-kwf"/>
+                                    <barButtonItem systemItem="trash" id="Ef8-CS-7yP">
+                                        <connections>
+                                            <action selector="clear:" destination="IcK-YG-fvB" id="LZ9-ZB-g0j"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-9H-31z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="afA-sH-gSo"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TTl-qy-rHw" secondAttribute="trailing" id="3Co-nG-PSe"/>
+                            <constraint firstAttribute="trailing" secondItem="HfI-yD-KS1" secondAttribute="trailing" id="8wB-PV-cDb"/>
+                            <constraint firstItem="7g7-VT-D4B" firstAttribute="top" secondItem="TTl-qy-rHw" secondAttribute="bottom" constant="5" id="CI7-K0-DZU"/>
+                            <constraint firstAttribute="trailing" secondItem="b8w-9H-31z" secondAttribute="trailing" id="GcX-uM-L6N"/>
+                            <constraint firstItem="b8w-9H-31z" firstAttribute="top" secondItem="xyj-eG-XLO" secondAttribute="top" id="XOD-Te-S3E"/>
+                            <constraint firstItem="HfI-yD-KS1" firstAttribute="top" secondItem="VKJ-p0-Wl1" secondAttribute="bottom" id="eAE-MD-4hk"/>
+                            <constraint firstItem="TTl-qy-rHw" firstAttribute="leading" secondItem="xyj-eG-XLO" secondAttribute="leading" id="pUX-Di-V95"/>
+                            <constraint firstItem="b8w-9H-31z" firstAttribute="leading" secondItem="xyj-eG-XLO" secondAttribute="leading" id="wZF-iE-c3n"/>
+                            <constraint firstItem="HfI-yD-KS1" firstAttribute="leading" secondItem="xyj-eG-XLO" secondAttribute="leading" id="yxR-iY-sLE"/>
+                            <constraint firstItem="TTl-qy-rHw" firstAttribute="top" secondItem="HfI-yD-KS1" secondAttribute="bottom" id="zlp-BZ-iQe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myProgressView" destination="b8w-9H-31z" id="kLF-MV-yBa"/>
+                        <outlet property="webView" destination="HfI-yD-KS1" id="80V-0G-fC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYQ-kn-KU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="432.23388305847078"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="caret_black" width="9" height="17"/>
+        <image name="caret_black_right" width="10" height="18"/>
+        <image name="icon_refresh" width="18" height="18"/>
+    </resources>
 </document>
