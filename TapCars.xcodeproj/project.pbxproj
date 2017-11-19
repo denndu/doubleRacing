@@ -270,7 +270,7 @@
 				TargetAttributes = {
 					21717EB51E3739EF00E12B2E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XE66H8T5WH;
+						DevelopmentTeam = 362EXMKP38;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -579,10 +579,10 @@
 				CODE_SIGN_ENTITLEMENTS = TapCars/TapCars.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XE66H8T5WH;
+				DEVELOPMENT_TEAM = 362EXMKP38;
 				INFOPLIST_FILE = TapCars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gravity.racing;
+				PRODUCT_BUNDLE_IDENTIFIER = double.racing;
 				PRODUCT_NAME = "BJracing-Tapcar";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -596,10 +596,10 @@
 				CODE_SIGN_ENTITLEMENTS = TapCars/TapCars.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XE66H8T5WH;
+				DEVELOPMENT_TEAM = 362EXMKP38;
 				INFOPLIST_FILE = TapCars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gravity.racing;
+				PRODUCT_BUNDLE_IDENTIFIER = double.racing;
 				PRODUCT_NAME = "BJracing-Tapcar";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
